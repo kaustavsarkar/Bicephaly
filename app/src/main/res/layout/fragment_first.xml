@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="75dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginBottom="490dp"
+        android:onClick="testConnection"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextIpAddress"
+        android:layout_width="149dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="490dp"
+        android:digits="0123456789."
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        android:text="@string/ip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="338dp"
+        android:layout_marginBottom="672dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="150dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextIpAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55">
+
+        <RadioButton
+            android:id="@+id/firstDevice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/first" />
+
+        <RadioButton
+            android:id="@+id/secondDevice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/second" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editPort"
+        android:layout_width="150dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="44dp"
+        android:autoText="true"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextIpAddress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
